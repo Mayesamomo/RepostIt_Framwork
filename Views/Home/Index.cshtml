@@ -1,0 +1,60 @@
+﻿@using RepostIt
+@model dynamic
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to this amazing reddit rip off</h1>
+    <div class="float-right col-md-2">
+        <br />
+        <div class="sidebar">
+            <img src="https://www.redditstatic.com/desktop2x/img/id-cards/home-banner@2x.png">
+            <div style="text-align: center; font-size: 1em">
+                Welcome to RepostIt home page. Come here to
+                check in with your favorite Communities.
+            </div>
+            <div style="text-align: center">
+                <a type="button" class="btnCreatePost" asp-controller="Posts" asp-action="Create">Create Post</a>
+            </div>
+            <div style="text-align: center">
+                <a type="button" class="btnCreateSubreddit" asp-controller="Communities" asp-action="Create">Create Subreddit</a>
+            </div>
+        </div>
+        <div class="sidebar-view-subreddit">
+            <div style="color: black; font-weight: bold">List of Communities</div>
+            <hr />
+            @foreach (Community item in Model.community)
+            {
+                <span>
+                    <span class="subreddit-text">  <a class="text-light bg-dark" asp-controller="Communities" asp-action="Details" asp-route-id="@item.Id">@Html.DisplayFor(modelItem => item.communityType)</a></span>
+
+                </span>
+                <hr>
+            }
+        </div>
+    </div>
+    @foreach (Post item in Model.posts)
+    {
+        
+            <div class="card col-md-10 border border-dark bg-light">
+                <h4><a asp-controller="Posts" asp-action="Details" asp-route-id="@item.id">@Html.DisplayFor(modelItem => item.showTitle)</a></h4>
+                <h4>@Html.DisplayFor(modelItem => item.community.communityType)</h4>
+                <p><i class="fas fa-user"></i>:@Html.DisplayFor(modelItem => item.name)</p>
+                <img src="@Html.DisplayFor(modelItem => item.url)" class="img-thumbnail" />
+                <br />
+                <br />
+                <p class="border">@Html.DisplayFor(modelItem => item.description)</p>
+                <div class="card-footer">
+                    <div class=" float-left">
+                        <a asp-controller="Likes" asp-action="addLike" asp-route-id="@item.id">@Model.likes.getLikes(@item.id) <i class="fa fa-arrow-up "></i> </a>
+                        <a asp-controller="Dislikes" asp-action="addDislike" asp-route-id="@item.id">@Model.dislike.getDislikes(@item.id) <i class="fa fa-arrow-down "></i> </a>
+                    </div>
+                </div>
+                
+            </div>
+            <br />
+        
+
+    }
+</div>

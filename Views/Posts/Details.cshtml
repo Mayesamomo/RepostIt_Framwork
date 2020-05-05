@@ -1,0 +1,69 @@
+﻿@using RepostIt.ViewModels
+@model commentViewModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+
+<div>
+
+    @foreach (Post item in Model.post)
+    {
+        if (item.id == Model.Id)
+        {
+            <div class="card col-md-12 border border-dark bg-light">
+
+              
+                <h4 class="text-center"><a asp-controller="Posts" asp-action="Details" asp-route-id="@item.id">@Html.DisplayFor(modelItem => item.showTitle)</a></h4>
+                <h4 class="text-center">@Html.DisplayFor(modelItem => item.community.communityType)</h4>
+                <p class="text-center"><i class="fas fa-user"></i>:@Html.DisplayFor(modelItem => item.name)</p>
+                <div class="text-center"><img src="@Html.DisplayFor(modelItem => item.url)" class="img-thumbnail" /></div>
+                <p class="text-center">@Html.DisplayFor(modelItem => item.description)</p>
+                <div class="card-footer">
+                    <div class="float-left">
+
+                        <a asp-controller="Likes" asp-action="addLike" asp-route-id="@item.id">@Model.likeRespositories.getLikes(@item.id) <i class="fa fa-arrow-up "></i> </a>
+                        <a asp-controller="Dislikes" asp-action="addDislike" asp-route-id="@item.id">@Model.dislikeRepositories.getDislikes(@item.id) <i class="fa fa-arrow-down "></i> </a>
+                    </div>
+                </div>
+                
+
+
+            </div>
+            <br />
+
+            <div >
+                <form asp-controller="Comments" asp-action="Create" asp-route-id="@item.id">
+                    <textarea asp-for="commentText" asp style="width : 500px;height : 200px;"></textarea>
+
+
+                        <input type="hidden" value="@User.Identity.Name" asp-for="name" class="form-control" />
+                        <input type="hidden" value="@item.id" asp-for="postId" class="form-control" />
+              
+                    <button type="submit" class="btn  btn-secondary ">Add Comment</button>
+                </form>
+            </div>
+        }
+    }
+</div>
+<br />
+<div >
+    @foreach (Comment item in Model.comments)
+    {
+
+        if (item.postId == Model.Id)
+        {
+            <div class=" col-9 border">
+                <p><i class="fas fa-user"></i>:@Html.DisplayFor(modelItem => item.name)</p>
+                <p>@Html.DisplayFor(modelItem => item.commentText)</p>
+
+
+
+
+            </div>
+            <br />
+        }
+    }
+</div>
+

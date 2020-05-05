@@ -1,0 +1,79 @@
+﻿
+@{
+    ViewData["Title"] = "profile";
+}
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <h1>List of all @User.Identity.Name's Comments</h1>
+            <div>
+                @foreach (Comment item in Model.comments)
+                {
+                    if (item.name == @User.Identity.Name)
+                    {
+                <div class="border col-9">
+                    <a asp-controller="Posts" asp-action="Details" asp-route-id="@item.postId">View Post</a>
+                    <p>@Html.DisplayFor(modelItem => item.name)</p>
+                    <p>@Html.DisplayFor(modelItem => item.commentText)</p>
+                </div>
+                        <br />
+                    }
+                }
+            </div>
+        </div>
+        <div class="col-md">
+            <div>
+                <h1>List of all @User.Identity.Name's posts</h1>
+                @foreach (Post item in Model.posts)
+                {
+                    if (item.name == @User.Identity.Name)
+                    {
+                        <div class=" col-md-12 border border-dark bg-light">
+
+                            <p>@ViewBag.Likes</p>
+                            <h4 class="text-center"><a asp-controller="Posts" asp-action="Details" asp-route-id="@item.id">@Html.DisplayFor(modelItem => item.showTitle)</a></h4>
+                            <h4 class="text-center">Posted In:@Html.DisplayFor(modelItem => item.community.communityType)</h4>
+                            <p class="text-center">By:@Html.DisplayFor(modelItem => item.name)</p>
+                            <div class="text-center"><img src="@Html.DisplayFor(modelItem => item.url)" class="img-thumbnail" /></div>
+                            <p class="text-center">@Html.DisplayFor(modelItem => item.description)</p>
+                            <div class="float-left">
+
+
+                            </div>
+                        </div>
+                        <br />
+
+                    }
+                }
+            </div>
+        </div>
+        <div class="col-sm border">
+
+            <h1>List of all @User.Identity.Name's Communitys</h1>
+            <div>
+                @foreach (Community item in Model.community)
+                {
+                    if (item.name == @User.Identity.Name)
+                    {
+                        <div class=" col-9 ">
+                            <a asp-controller="Communities" asp-action="Details" asp-route-id="@item.Id"><h3 class="">@Html.DisplayFor(modelItem => item.communityType)</h3></a>
+
+                        </div>
+                        <br />
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+

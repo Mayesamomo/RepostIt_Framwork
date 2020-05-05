@@ -1,0 +1,226 @@
+﻿/***Navbar and header Css*/
+header {
+    border-radius: 1px;
+    margin-bottom: 1em;
+}
+
+.reddit-icon-svg {
+    height: 50px;
+    padding: 8px 8px 8px 0;
+    width: 50px;
+}
+
+.reddit-text {
+    font-weight: 700;
+    height: 50px;
+    width: 50px;
+}
+
+.logo {
+    text-decoration: none;
+}
+
+.login, .sign-up {
+    background-color: transparent;
+    border-color: #0079D3;
+    color: #0079D3;
+    fill: #0079D3;
+    border: 1px solid;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    line-height: 24px;
+    text-transform: uppercase;
+    padding: 3px 16px;
+    opacity: 1;
+}
+
+.sign-up {
+    background-color: #0079D3;
+    border-color: #0079D3;
+    color: aliceblue;
+}
+
+    .sign-up:hover {
+        opacity: 0.6;
+    }
+
+.userdetails {
+    background-color: transparent;
+    border-color: #0079D3;
+    color: #0079D3;
+    fill: #0079D3;
+    border: 1px solid;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    line-height: 24px;
+    text-transform: uppercase;
+    padding: 3px 16px;
+    opacity: 1;
+    border: 0px;
+}
+
+    .userdetails:hover {
+        border: 1px solid;
+    }
+
+.account-icon {
+    border-radius: 4px;
+    float: left;
+    margin-right: 5px;
+    max-height: 24px;
+    max-width: 24px;
+}
+
+html {
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    margin-top: 63px;
+    height: 100%;
+}
+
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+
+.login,
+.sign-up {
+    background-color: #0079D3;
+    border-color: #0079D3;
+    color: aliceblue;
+    fill: #0079D3;
+    border: 1px solid;
+    border-radius: 4px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    line-height: 24px;
+    text-transform: uppercase;
+    padding: 3px 16px;
+    opacity: 1;
+}
+/**Homepage CSS***/
+.sidebar-view-subreddit {
+    width: 312px;
+    height: 242px;
+    --post-line-color: #ccc;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #878A8C;
+    position: relative;
+    border-radius: 4px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.sidebar-view-subreddit {
+    height: 280px;
+}
+
+/*   */
+html {
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    margin-top: 63px;
+    height: 100%;
+}
+
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+
+.login,
+.sign-up {
+    background-color: #0079D3;
+    border-color: #0079D3;
+    color: aliceblue;
+    fill: #0079D3;
+    border: 1px solid;
+    border-radius: 4px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    line-height: 24px;
+    text-transform: uppercase;
+    padding: 3px 16px;
+    opacity: 1;
+}
+
+/***sidebar*/
+.sidebar {
+    width: 312px;
+    height: 242px;
+    --post-line-color: #ccc;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    overflow: hidden;
+    background-color: rgba(255,255,255,0.8);
+    color: #878A8C;
+    position: relative;
+    border-radius: 4px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.btnCreatePost, .btnCreateSubreddit {
+    background-color: #0079D3;
+    border-color: #0079D3;
+    color: aliceblue;
+    fill: #0079D3;
+    border: 1px solid;
+    border-radius: 4px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    line-height: 24px;
+    text-transform: uppercase;
+    padding: 3px 16px;
+    opacity: 1;
+    width: 288px;
+    height: 34px;
+}
+
+.btnCreateSubreddit {
+    margin-top: 5px;
+    color: #0079D3;
+    background-color: transparent;
+}
+
+.sidebar > ul > li {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #1c1c1c;
+}
+
+

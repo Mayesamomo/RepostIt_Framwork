@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20200502004215_initialCreateUserSchema.cs" />
+    <Compile Remove="Migrations\20200502004215_initialCreateUserSchema.Designer.cs" />
+    <Compile Remove="Migrations\20200502004829_initialCreateSchema.cs" />
+    <Compile Remove="Migrations\20200502004829_initialCreateSchema.Designer.cs" />
+    <Compile Remove="Migrations\20200502011859_initialCreateSchema.cs" />
+    <Compile Remove="Migrations\20200502011859_initialCreateSchema.Designer.cs" />
+    <Compile Remove="Migrations\20200502012841_initialCreateSchema.cs" />
+    <Compile Remove="Migrations\20200502012841_initialCreateSchema.Designer.cs" />
+    <Compile Remove="Migrations\20200502013903_initialCreateSchema.cs" />
+    <Compile Remove="Migrations\20200502013903_initialCreateSchema.Designer.cs" />
+    <Compile Remove="Migrations\20200503131525_likeAdded.cs" />
+    <Compile Remove="Migrations\20200503131525_likeAdded.Designer.cs" />
+    <Compile Remove="Migrations\20200503152352_updatedCommunit.cs" />
+    <Compile Remove="Migrations\20200503152352_updatedCommunit.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\fontawesome\webfonts\fa-brands-400.svg" />
+    <None Include="wwwroot\fontawesome\webfonts\fa-brands-400.woff2" />
+    <None Include="wwwroot\fontawesome\webfonts\fa-regular-400.svg" />
+    <None Include="wwwroot\fontawesome\webfonts\fa-regular-400.woff2" />
+    <None Include="wwwroot\fontawesome\webfonts\fa-solid-900.svg" />
+    <None Include="wwwroot\fontawesome\webfonts\fa-solid-900.woff2" />
+  </ItemGroup>
+
+  <ItemGroup>
+   
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.2" />
+    <PackageReference Include="NToastNotify" Version="6.1.3" />
+
+
+  </ItemGroup>
+
+
+
+</Project>

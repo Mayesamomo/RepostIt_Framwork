@@ -1,0 +1,44 @@
+﻿@model RepostIt.Models.Like
+
+@{
+    ViewData["Title"] = "Create";
+}
+<script type="text/javascript">
+
+function PayPalPost()
+{
+     var theForm = document.getElementById("form1");
+     theForm.action = "https://localhost:5001/Posts/Details/" + @ViewBag.postid;
+     theForm.submit();
+}
+</script>
+
+    <h1>Create</h1>
+
+    <h4>Like</h4>
+    <hr />
+    <div class="row" onload="PayPalPost();">
+        <div class="col-md-4">
+            <form asp-action="Create" name="form1">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+
+                    <input type="hidden" value="@User.Identity.Name" asp-for="username" class="form-control" />
+
+                </div>
+                <div class="form-group">
+
+                    <input type="hidden" value="@ViewBag.postid" asp-for="postId" class="form-control" />
+
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+

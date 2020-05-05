@@ -1,0 +1,40 @@
+﻿@model IEnumerable<RepostIt.Models.Community>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<br>
+<h5 style="text-align:center; text-decoration:underline;">Create your own community</h5>
+<p>
+    <a type="button" class="btn btn-outline-primary" asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.communityType)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            if (item.name == @User.Identity.Name)
+            {
+
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.communityType)
+                    </td>
+                    <td>
+                        <a type="button" class="btn btn-success" asp-action="Edit" asp-route-id="@item.Id"><i class="far fa-edit"></i></a> 
+                        <a type="button" class="btn btn-primary" asp-action="Details" asp-route-id="@item.Id"><i class="fas fa-info-circle"></i></a>
+                        <a type="button" class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id"><i class="far fa-trash-alt"></i></a>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
