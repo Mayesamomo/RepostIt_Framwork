@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\micha\\Documents\\RepostIt\\RepostIt\\RepostIt.csproj": {}
+    "C:\\Users\\micha\\source\\repos\\RepostIt\\RepostIt.csproj": {}
   },
   "projects": {
-    "C:\\Users\\micha\\Documents\\RepostIt\\RepostIt\\RepostIt.csproj": {
+    "C:\\Users\\micha\\source\\repos\\RepostIt\\RepostIt.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\micha\\Documents\\RepostIt\\RepostIt\\RepostIt.csproj",
+        "projectUniqueName": "C:\\Users\\micha\\source\\repos\\RepostIt\\RepostIt.csproj",
         "projectName": "RepostIt",
-        "projectPath": "C:\\Users\\micha\\Documents\\RepostIt\\RepostIt\\RepostIt.csproj",
+        "projectPath": "C:\\Users\\micha\\source\\repos\\RepostIt\\RepostIt.csproj",
         "packagesPath": "C:\\Users\\micha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\micha\\Documents\\RepostIt\\RepostIt\\obj\\",
+        "outputPath": "C:\\Users\\micha\\source\\repos\\RepostIt\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\micha\\AppData\\Roaming\\NuGet\\NuGet.Config",

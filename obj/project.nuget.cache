@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "d0PHYVoccKHqjUzC/uaxbMXpHF6CgM/z/pDRr5wRC3Ri4aSbJeDg/d+Lbr+zHHR4uUc9Lyq9boOKjxhtw9W9qw==",
+  "dgSpecHash": "mYwGxoi2AXAMwJHs3M0XS6B+amCCoR0qCTKFLHAIV54jXZ/OeseR8Stk6QEqxj9SAM7CbM7HBjf0O04k5JAb1A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\micha\\Documents\\RepostIt\\RepostIt\\RepostIt.csproj",
+  "projectFilePath": "C:\\Users\\micha\\source\\repos\\RepostIt\\RepostIt.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\micha\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",
     "C:\\Users\\micha\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

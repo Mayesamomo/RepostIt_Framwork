@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAEpRrcIFsq0KBy4Go8RUpcAAAAAACAAAAAAAQZgAAAAEAACAAAADt/O0Iyz3/Zn1thfZbAladHXpPfkrVUxoaw/VQbov+9AAAAAAOgAAAAAIAACAAAABLd9+VnV2/jjjpe8OfWdCMRwqJ7/bxExaXrg+DbOjUL4AAAAAPDhrUImwDDs4ZBf8BKY23KZCVktNI3HNnBRfiot8P24ukTzAFrEirSeUZwpx6H+jvb9v5XcQDQSIPoNxzI0pUFrmwHD032kWQs58AXUJyPk3cKn79TX1bQtzLygTEAmRBheT3ImjQxK+Rx/d0DOpEfB8e6fqPupROfbjM2rX+IUAAAACaY5dvsumxkIaAB41wAdI1vZXbyDeer9gfEib9hjT9rImek7i/NNiV5CWLq9o/pU3dCG0c0+tIcilLitnz7Ema</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="RepostItConnection">
+      <Value>Data Source=tcp:repostit20dbserver.database.windows.net,1433%3bInitial Catalog=RepostIt2020_db%3bUser Id=Repostit%40repostit20dbserver%3bPassword=Password%401</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="RepostIt.Data.ApplicationDbContext">
+      <Value>Data Source=tcp:repostit20dbserver.database.windows.net,1433%3bInitial Catalog=RepostIt2020_db%3bUser Id=Repostit%40repostit20dbserver%3bPassword=Password%401</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

@@ -5,7 +5,13 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome to this amazing reddit rip off</h1>
+    <div class="container my-5 py-5 z-depth-1">
+        <!--Section: Content-->
+        <section class="text-center px-md-5 mx-md-5 dark-grey-text">
+            <h3 class="font-weight-bold">Welcome to this amazing reddit rip off </h3>
+        </section>
+        <!--Section: Content-->
+    </div>
     <div class="float-right col-md-2">
         <br />
         <div class="sidebar">
@@ -27,7 +33,7 @@
             @foreach (Community item in Model.community)
             {
                 <span>
-                    <span class="subreddit-text">  <a class="text-light bg-dark" asp-controller="Communities" asp-action="Details" asp-route-id="@item.Id">@Html.DisplayFor(modelItem => item.communityType)</a></span>
+                    <span class="subreddit-text">  <a class="text-dark" asp-controller="Communities" asp-action="Details" asp-route-id="@item.Id">@Html.DisplayFor(modelItem => item.communityType)</a></span>
 
                 </span>
                 <hr>

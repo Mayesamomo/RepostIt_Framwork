@@ -4,6 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - RepostIt</title>
+    <!--Material Design-->
+    <link href="~/lib/MDB-Free/css/mdb.min.css" rel="stylesheet" />
     <!--Bootstrap-->
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <!--Custom CSS-->
@@ -11,82 +13,85 @@
     <link rel="stylesheet" href="~/css/site.css" />
     <!--Icon-->
     <link href="~/fontawesome/css/all.css" rel="stylesheet" />
-    <!--Material Design-->
-    <!-- Material Design Bootstrap -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/css/mdb.min.css" rel="stylesheet">
+
+    @*<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/css/mdb.min.css" rel="stylesheet">*@
+
     <script src="https://kit.fontawesome.com/69c4273e2a.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
     <header>
-        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-            <div class="flex-grow-1">
-                @await Component.InvokeAsync("NToastNotify")
-                <a aria-label="Home" class="logo" asp-area="" asp-controller="Home" asp-action="Index">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="reddit-icon-svg">
-                        <g>
-                            <circle fill="#FF4500" cx="10" cy="10" r="10"></circle>
-                            <path fill="#FFF"
-                                  d="M16.67,10A1.46,1.46,0,0,0,14.2,9a7.12,7.12,0,0,0-3.85-1.23L11,4.65,13.14,5.1a1,1,0,1,0,.13-0.61L10.82,4a0.31,0.31,0,0,0-.37.24L9.71,7.71a7.14,7.14,0,0,0-3.9,1.23A1.46,1.46,0,1,0,4.2,11.33a2.87,2.87,0,0,0,0,.44c0,2.24,2.61,4.06,5.83,4.06s5.83-1.82,5.83-4.06a2.87,2.87,0,0,0,0-.44A1.46,1.46,0,0,0,16.67,10Zm-10,1a1,1,0,1,1,1,1A1,1,0,0,1,6.67,11Zm5.81,2.75a3.84,3.84,0,0,1-2.47.77,3.84,3.84,0,0,1-2.47-.77,0.27,0.27,0,0,1,.38-0.38A3.27,3.27,0,0,0,10,14a3.28,3.28,0,0,0,2.09-.61A0.27,0.27,0,1,1,12.48,13.79Zm-0.18-1.71a1,1,0,1,1,1-1A1,1,0,0,1,12.29,12.08Z">
-                            </path>
-                        </g>
-                    </svg>
-                    <span class="reddit-text">
-                        RepostIt
-                    </span>
-                </a>
-            </div>
-            <div class="flex-grow-1 float-right">
-                <div class="float-right">
-                    @if (!User.Identity.IsAuthenticated)
-                    {
-                        <div>
-                            <a routerLink="/sign-up" class="float-right sign-up mr-2" asp-area="" asp-controller="LoginRegister" asp-action="Register">Sign up</a>
-                            <a routerLink="/login" class="float-right login mr-2" asp-area="" asp-controller="LoginRegister" asp-action="Login">Login</a>
-                        </div>
-                    }
-                    else
-                    {
-                        <div class="flex-grow-1 float-left" style="align-items:center">
-                            <ul class="navbar-nav mr-auto">
-                                <li class="nav-item active">
-                                    <a class="nav-link" asp-area="" asp-controller="Posts" asp-action="Index">Posts</a>
-                                </li>
-                                <li class="nav-item active">
-                                    <a class="nav-link" asp-area="" asp-controller="Comments" asp-action="Index">Comments</a>
-                                </li>
-                                <li class="nav-item active">
-                                    <a class="nav-link" asp-area="" asp-controller="Communities" asp-action="Index">Communities</a>
-                                </li>
+        <nav class="mb-1 navbar navbar-expand-lg navbar-dark indigo">
+            @await Component.InvokeAsync("NToastNotify")
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+                    aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a aria-label="Home" class="navbar-brand logo" asp-area="" asp-controller="Home" asp-action="Index">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="reddit-icon-svg">
+                    <g>
+                        <circle fill="#FF4500" cx="10" cy="10" r="10"></circle>
+                        <path fill="#FFF"
+                              d="M16.67,10A1.46,1.46,0,0,0,14.2,9a7.12,7.12,0,0,0-3.85-1.23L11,4.65,13.14,5.1a1,1,0,1,0,.13-0.61L10.82,4a0.31,0.31,0,0,0-.37.24L9.71,7.71a7.14,7.14,0,0,0-3.9,1.23A1.46,1.46,0,1,0,4.2,11.33a2.87,2.87,0,0,0,0,.44c0,2.24,2.61,4.06,5.83,4.06s5.83-1.82,5.83-4.06a2.87,2.87,0,0,0,0-.44A1.46,1.46,0,0,0,16.67,10Zm-10,1a1,1,0,1,1,1,1A1,1,0,0,1,6.67,11Zm5.81,2.75a3.84,3.84,0,0,1-2.47.77,3.84,3.84,0,0,1-2.47-.77,0.27,0.27,0,0,1,.38-0.38A3.27,3.27,0,0,0,10,14a3.28,3.28,0,0,0,2.09-.61A0.27,0.27,0,1,1,12.48,13.79Zm-0.18-1.71a1,1,0,1,1,1-1A1,1,0,0,1,12.29,12.08Z">
+                        </path>
+                    </g>
+                </svg>
+                <span class="reddit-text">
+                    RepostIt
+                </span>
+            </a>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+                @if (!User.Identity.IsAuthenticated)
+                {
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a aria-label="Home" class="logo navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><i class="fas fa-home"></i>Home</a>
+                        </li>
+                        <li class="nav-item active float-right">
+                            <a type="button"  routerLink="/sign-up" class="float-right sign-up mr-2 btn btn-outline-amber btn-sm" asp-area="" asp-controller="LoginRegister" asp-action="Register">Sign up</a>
+                        </li>
+                        <li class="nav-item active float-right">
+                            <a routerLink="/login" class="float-right login mr-2 btn btn-outline-amber btn-sm" asp-area="" asp-controller="LoginRegister" asp-action="Login">Login</a>
+                        </li>
+                    </ul>
+                }
+                else
+                {
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a aria-label="Home" class="logo navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><i class="fas fa-home"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Posts" asp-action="Index"><i class="fas fa-rss"></i>Posts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Comments" asp-action="Index"><i class="far fa-comments">Comments</i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Communities" asp-action="Index"><i class="fas fa-users"></i>Communities</a>
+                        </li>
 
-                            </ul>
+                    </ul>
+                    <ul class="navbar-nav ml-auto nav-flex-icons">
 
-                        </div>
-                        <!-- Example single danger button -->
-                        <div class="btn-group">
-                            <a class="userdetails dropdown-toggle" id="dropdownBasic1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <strong> @User.Identity.Name</strong>
-                                <img class="account-icon" src="https://www.redditstatic.com/avatars/avatar_default_08_D4E815.png">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-user"><strong> @User.Identity.Name</strong></i>
                             </a>
-                            <div class="dropdown-menu">
-
+                            <div class="dropdown-menu dropdown-menu-right dropdown-default"
+                                 aria-labelledby="navbarDropdownMenuLink-333">
                                 <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="profile">Profile</a>
                                 <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                                 <div class="dropdown-divider"></div>
-                                <a type="button" class="dropdown-item" asp-area="" asp-controller="LoginRegister" asp-action="LogOut">LogOut</a>
-
+                                <a class="dropdown-item" asp-area="" asp-controller="LoginRegister" asp-action="LogOut">Logout</a>
                             </div>
-                        </div>
-
-
-
-                    }
-
-
-                </div>
-
+                        </li>
+                    </ul>
+                }
             </div>
         </nav>
+        <!--/.Navbar -->
     </header>
     <div class="container">
         <main role="main" class="pb-3">
@@ -94,11 +99,7 @@
         </main>
     </div>
 
-    @*<footer class="border-top footer text-muted">
-            <div class="container">
-                &copy; 2020 - RepostIt - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-            </div>
-        </footer>*@
+
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/js/mdb.min.js"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

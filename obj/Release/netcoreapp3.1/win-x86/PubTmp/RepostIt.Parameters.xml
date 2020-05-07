@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="RepostIt2020" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\micha\\source\\repos\\RepostIt\\obj\\Release\\netcoreapp3\.1\\win-x86\\PubTmp\\Out\\$" />
+  </parameter>
+  <parameter name="RepostIt.Data.ApplicationDbContext" description="" value="Data Source=tcp:repostit20dbserver.database.windows.net,1433;Initial Catalog=RepostIt2020_db;User Id=Repostit@repostit20dbserver;Password=Password@1" tags="dbfullsql">
+    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^C:\\Users\\micha\\source\\repos\\RepostIt\\obj\\Release\\netcoreapp3\.1\\win-x86\\PubTmp\\EFSQLScripts\\RepostIt\.Data\.ApplicationDbContext\.sql$" />
+  </parameter>
+</parameters>

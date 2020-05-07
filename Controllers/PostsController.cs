@@ -44,7 +44,7 @@ namespace RepostIt.Controllers
         {
             int count = 0;
             dynamic mymodel = new ExpandoObject();
-            if (id == null)
+            if (id == 0)
             {
                 return NotFound();
             }
